@@ -1,7 +1,7 @@
 # 社群信用異常報告
 Community Credit Abnormal Report
 
-# Reference
+# Framework
 * [Laravel 9.x](https://github.com/laravel/laravel/blob/9.x/README.md) 
 
 ## License
