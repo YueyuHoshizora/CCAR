@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\OauthController;
 
 /*
 |--------------------------------------------------------------------------
@@ -15,4 +16,9 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
     return view('welcome');
+});
+
+Route::controller(OauthController::class)->group(function() {
+    Route::get('/oauth/discord', 'discordAuth');
+    Route::get('/oauth/discord/callback', 'discordCallback');
 });
