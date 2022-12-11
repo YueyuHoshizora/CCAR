@@ -17,13 +17,13 @@ return new class extends Migration
             $table->uuid('id')->primary();
 
             $table->enum('socialite', ['discord', 'twitch', 'youtube']);
-            $table->string('uid', 255);
+            $table->string('uid');
 
-            $table->string('name', 255);
-            $table->string('email', 255)->nullable(true);
-            $table->string('avatar', 255)->nullable(true);
+            $table->string('name');
+            $table->string('email')->nullable(true);
+            $table->string('avatar')->nullable(true);
 
-            $table->string('token', 255);
+            $table->string('token');
             $table->timestamp('expires')->nullable(true);
 
             $table->softDeletes();
@@ -40,6 +40,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('user_discords');
+        Schema::dropIfExists('users_discord');
     }
 };
